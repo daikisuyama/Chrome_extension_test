@@ -1,7 +1,7 @@
 from flask import Flask,request,render_template
 app=Flask(__name__)
 
-@app.route("/word_count/<reason>")
+@app.route("/word_count")
 def word_count():
     reason=request.args.get("reason")
     return render_template("word_result.html",reason=reason)
