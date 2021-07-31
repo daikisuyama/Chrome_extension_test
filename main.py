@@ -7,4 +7,4 @@ def word_count():
     return render_template("word_result.html",reason=reason)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
